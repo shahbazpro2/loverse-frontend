@@ -13,7 +13,13 @@ export const modalAtom = atom({});
 
 export const useModal = () => useAtom(modalAtom);
 
-export const openCloseModalAtom = atom(null, (get, set, { key, status, data }) => {
+type OpenCloseType = {
+  key: string;
+  status: boolean;
+  data?: any;
+};
+
+export const openCloseModalAtom = atom(null, (get, set, { key, status, data }: OpenCloseType) => {
   const modal = get(modalAtom);
   if (!status) {
     set(modalAtom, {
@@ -41,3 +47,9 @@ export const useModalState = (key) => {
 
   return modalVal;
 };
+
+export const useOpenCloseModal = () => {
+  const openCloseModal = useSetAtom(openCloseModalAtom)
+  return openCloseModal
+
+}
