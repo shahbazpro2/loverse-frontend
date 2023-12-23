@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@wrappers/theme-provider'
 import AuthProvider from '@components/wrappers/auth-provider'
+import WithAuth from '@components/wrappers/withAuth'
 
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
@@ -26,7 +27,9 @@ export default function RootLayout({
       <body className={poppins.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <AuthProvider>
-            {children}
+            <WithAuth>
+              {children}
+            </WithAuth>
           </AuthProvider>
         </ThemeProvider>
       </body>

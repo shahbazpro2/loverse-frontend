@@ -25,7 +25,8 @@
       "@ui/*": ["./components/ui/*"],
       "@hooks/*": ["./hooks/*"],
       "@lib/*": ["./lib/*"],
-      "@wrappers/*": ["./components/wrappers/*"]
+      "@wrappers/*": ["./components/wrappers/*"],
+      "@api/*": ["./api/*"]
     }
   },
   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],

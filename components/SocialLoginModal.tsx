@@ -22,10 +22,7 @@ const SocialLoginModal = () => {
                 <div className="text-center">
                     <div className="text-2xl">Welcome</div>
                     <div>Choose any one to continue <span className="font-bold">Loverse</span></div>
-                    <div className="mt-5 space-y-3" onClick={() => openCloseModal({
-                        key: imageModalKey,
-                        status: true
-                    })}>
+                    <div className="mt-5 space-y-3">
                         <GoogleButton />
                     </div>
                 </div>
